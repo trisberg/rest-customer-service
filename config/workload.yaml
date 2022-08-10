@@ -1,0 +1,23 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: customer-service
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: customer-service
+spec:
+  serviceClaims:
+    - name: db
+      ref:
+        apiVersion: sql.tanzu.vmware.com/v1
+        kind: Postgres
+        name: customer-service-postgres
+  build:
+    env:
+      - name: BP_JVM_VERSION
+        value: "11"
+  source:
+    git:
+      url: https://github.com/sample-accelerators/rest-service-db.git
+      ref:
+        branch: main

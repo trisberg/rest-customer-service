@@ -1,0 +1,21 @@
+GET http://127.0.0.1:8080/actuator
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+<> 2022-08-03T174937.200.json
+
+###
+
+GET http://127.0.0.1:8080/actuator/health
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+<> 2022-08-03T174953.200.json
+
+###
+
+GET http://127.0.0.1:8080/api-docs.yaml
+Accept: application/vnd.oai.openapi
+
+<> 2022-08-03T175009.200.vnd.oai.openapi
+
+###
+

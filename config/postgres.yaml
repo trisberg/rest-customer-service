@@ -1,0 +1,13 @@
+apiVersion: sql.tanzu.vmware.com/v1
+kind: Postgres
+metadata:
+  name: customer-service-postgres
+spec:
+  memory: 800Mi
+  cpu: "0.8"
+  storageClassName: standard-rwo
+  storageSize: 2G
+  pgConfig:
+    dbname: customer-service
+    username: pgadmin
+    appUser: pgappuser
