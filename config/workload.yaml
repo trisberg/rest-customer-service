@@ -18,6 +18,6 @@ spec:
         value: "11"
   source:
     git:
-      url: https://github.com/sample-accelerators/rest-service-db.git
+      url: https://github.com/trisberg/rest-customer-service.git
       ref:
         branch: main
